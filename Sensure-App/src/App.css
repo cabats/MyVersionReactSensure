@@ -1,0 +1,183 @@
+body {
+  background: url('/images/backgroundMain.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.uclogo {
+  max-height: 200px;
+  max-width: 200px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.logo-image {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* Centers it horizontally */
+}
+
+.login-container {
+  background: rgba(240, 240, 240, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content: center;
+  align-items: center;  
+  width: 50vh; 
+  max-width: 500px; 
+  max-height: 600px;
+  height: 70vh; 
+  min-width: 300px;
+  margin: 20% auto;
+  overflow: hidden;
+}
+
+.input {
+  margin: 20px;
+  background: rgb(254, 253, 253);
+  border: none;
+  outline: none;
+  width: 80%;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #292828;
+}
+
+.input::placeholder {
+  color: rgb(69, 66, 66);
+}
+
+/* ============================= */
+/* HOME PAGE CONTAINERS          */
+/* ============================= */
+
+.homepage-container {
+  display: flex;
+  align-items: center;
+  padding:1%;
+  margin: 2% auto;
+  background-color: rgb(212, 198, 198);
+  width: 90vw;
+  height: 90vh;
+  gap: 10px;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.homepage-containerLeft {
+  margin-left: 10px;
+  background-color: #212121;
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.homepage-containerRight {
+  height: 95%;
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  flex:1;
+}
+
+/* ============================= */
+/* ENTRANCE/EXIT POV STYLES      */
+/* ============================= */
+
+.homepageRight-insider {
+  min-height: 400px;
+  min-width: 350px;
+  display: flex;
+  height:90%;
+  border-radius: 5px;
+  background-color: rgb(28, 26, 26);
+  margin: 10px auto;
+  justify-content: space-between;
+  gap: 10px;
+  flex:1;
+}
+
+.Entrance {
+  min-height: 190px;
+  min-width: 320px;
+  height: 98%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: rgb(89, 13, 202);
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Exit {
+  min-height: 190px;
+  min-width: 320px;
+  height: 98%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: rgb(13, 202, 89);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+/* ============================= */
+/* AUDIT LOGS SECTION            */
+/* ============================= */
+
+.homepageRight-AuditLog {
+  min-height: 400px;
+  min-width: 850px;
+  display: flex;
+  height: 95%;
+  width: 98%;
+  border-radius: 5px;
+  background-color: rgb(8, 70, 68);
+  margin: 10px auto;
+}
+
+/* ============================= */
+/* USER PROFILE SECTION          */
+/* ============================= */
+
+.userlogo {
+  height: 30%;
+  width: 40%;
+  margin: 5% auto;
+  margin-bottom: 0;
+}
+
+.userName {
+  color: white;
+  text-align: center;
+  background-color: black;
+  width: 30%;
+  border-radius: 20px;
+  padding: 2%;
+  font-family: Arial;
+  border: 1.5px solid rgb(61, 106, 255);
+}

@@ -1,0 +1,41 @@
+.expandedContainer {
+    width: 100%;  /* ✅ Expands only inside homepage-containerRight */
+    height: 100%;
+    background-color: rgba(10, 2, 240, 0.9); /* Dark background for effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Smooth effect */
+    position: relative;  /* ✅ Makes sure button stays inside */
+}
+
+.backButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Entrance, .Exit {
+    cursor: pointer; /* ✅ Makes it obvious that it's clickable */
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+/* 🔥 Hover Effect: Slight Scale & Background Change */
+.Entrance:hover {
+    transform: scale(1.05);
+    background-color: rgb(110, 30, 220); /* Slightly brighter purple */
+}
+
+.Exit:hover {
+    transform: scale(1.05);
+    background-color: rgb(20, 230, 120); /* Slightly brighter green */
+}
+
