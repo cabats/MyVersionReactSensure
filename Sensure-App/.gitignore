@@ -7,6 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+backend_YOLOv8/
+backend/node_modules
 node_modules
 dist
 dist-ssr

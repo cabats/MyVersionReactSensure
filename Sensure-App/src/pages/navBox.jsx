@@ -9,7 +9,7 @@ const navBox = () => {
     const handleOpenNewWindow = () => {
         const width = window.screen.availWidth;
         const height = window.screen.availHeight;
-        window.open('/new-form', '_blank', `width=${width},height=${height},top=0,left=0`);
+        window.open('/info', '_blank', `width=${width},height=${height},top=0,left=0`);
     };
 
   return (

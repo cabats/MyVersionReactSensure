@@ -3,13 +3,16 @@ import mysql from "mysql"
 import uploadRoutes from "./routes/upload.js"
 import requestRoutes from "./routes/request.js"
 import cors from "cors"
+import multer from "multer"
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use("/new",uploadRoutes)
 
+
+app.use("/images",express.static("images"))
+app.use("/new",uploadRoutes)
 app.use("/request",requestRoutes)
 
 /*

@@ -1,5 +1,5 @@
 import express from "express"
-import { deleteAcc, seeData,updateAcc } from "../controllers/request.js"
+import { deleteAcc, seeData,updateAcc,seeDriver } from "../controllers/request.js"
 
 const router = express.Router()
 router.get("/",(req,res)=>{
@@ -8,4 +8,5 @@ router.get("/",(req,res)=>{
 router.get("/seedata",seeData)
 router.delete("/delete/:id",deleteAcc)
 router.put("/user/:id",updateAcc)
+router.get("/driver",seeDriver)
 export default router

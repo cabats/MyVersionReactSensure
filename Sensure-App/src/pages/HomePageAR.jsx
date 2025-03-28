@@ -24,12 +24,26 @@ function HomePageAR() {
   const [selectedRow,setSelectedRow] = useState(null);
   const [data,setData] = useState([]);
   const handleChange = e =>{
-    setInputs(prev=>({...prev,[e.target.name]:e.target.value}))
+    const { name, value, files } = e.target;
+  if (name === "user_picture" && files) {
+    setInputs((prev) => ({ ...prev, [name]: files[0] }));
+  } else {
+    setInputs((prev) => ({ ...prev, [name]: value }));
+  }
   }
 
   const handleSubmit = async e =>{
     e.preventDefault()
     try{
+
+      if(inputs.user_picture !== "noimage" && inputs.user_picture instanceof File){
+        const formData = new FormData();
+        formData.append("profileImage", inputs.user_picture);
+        const uploadRes = await axios.post("http://localhost:8800/new/upload-image", formData,{headers: { "Content-Type": "multipart/form-data" }});
+        const imageUrl = uploadRes.data.imageUrl;
+        inputs.user_picture = imageUrl;
+      }
+
       const res = await axios.post(`http://localhost:8800/new/add`,inputs);
       fetchData();
       console.log(res);
